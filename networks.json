@@ -1,0 +1,8 @@
+{
+  "mainnet": {
+    "Lendexe": {
+      "address": "0x8ec8a5627af6b89eb58a45d29e7e90c4aac3ee31",
+      "startBlock": 18968851
+    }
+  }
+}

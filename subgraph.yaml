@@ -1,0 +1,24 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Lendexe
+    network: mainnet
+    source:
+      address: "0x8ec8a5627af6b89eb58a45d29e7e90c4aac3ee31"
+      abi: Lendexe
+      startBlock: 18968851
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - UserProfile
+      abis:
+        - name: Lendexe
+          file: ./abis/Lendexe.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/lendexe.ts

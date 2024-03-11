@@ -1,0 +1,4 @@
+type UserProfile @entity {
+  id: ID!
+  amount: BigInt!
+}
